@@ -1,55 +1,24 @@
 
 import pygame
 import time
+
 from random import randint
-import random
 
 pygame.font.init()
 
 # Generate some random numbers
 
-numArray = [1, 2, 3, 4, 5, 6, 7, 8, 9]
-
-num1 = randint(1, 9)
-numArray.remove(num1)
-
-num2 = randint(1, 9)
-numArray.remove(num2)
-
-num3 = randint(1, 9)
-numArray.remove(num3)
-
-num4 = randint(1, 9)
-numArray.remove(num4)
-
-num5 = randint(1, 9)
-numArray.remove(num5)
-
-num6 = randint(1, 9)
-numArray.remove(num6)
-
-num7 = randint(1, 9)
-numArray.remove(num7)
-
-num8 = randint(1, 9)
-numArray.remove(num8)
-
-num9 = randint(1, 9)
-numArray.remove(num9)
-
-
-
 class Grid:
     board = [
-        [num1, num2, num3, 0, num6, num7, num4, 0, num5],
-        [num2, 0, num1, num1, num1, num1, num1, num1, num1],
-        [num3, num1, num1, num1, num1, num1, num1, num1, num1],
-        [num4, num1, num1, num1, num1, num1, num1, num1, num1],
-        [0, num1, num1, num1, num1, num1, num1, num1, num7],
-        [num6, num1, num1, num1, num1, num1, num1, num1, 0],
-        [num5, num1, num1, num1, num1, num1, num1, num1, num1],
-        [num7 , num1, num1, num1, num1, num1, num1, num1, num1],
-        [num9, num1, num1, num1, num1, num1, num1, num1, num1]
+        [7, 8, 0, 4, 0, 0, 1, 2, 0],
+        [6, 0, 0, 0, 7, 5, 0, 0, 9],
+        [0, 0, 0, 6, 0, 1, 0, 7, 8],
+        [0, 0, 7, 0, 4, 0, 2, 6, 0],
+        [0, 0, 1, 0, 5, 0, 9, 3, 0],
+        [9, 0, 4, 0, 6, 0, 0, 0, 5],
+        [0, 7, 0, 3, 0, 0, 0, 1, 2],
+        [1, 2, 0, 0, 0, 7, 4, 0, 0],
+        [0, 4, 9, 2, 0, 6, 0, 0, 7]
     ]
 
     def __init__(self, rows, cols, width, height, win):
@@ -280,7 +249,7 @@ def format_time(secs):
 
 def main():
     win = pygame.display.set_mode((540,600))
-    pygame.display.set_caption("Sudoku Challenge Solver")
+    pygame.display.set_caption("Sudoku Challenge Solver") 
     board = Grid(9, 9, 540, 540, win)
     key = None
     run = True
