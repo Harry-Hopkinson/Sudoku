@@ -146,6 +146,8 @@ class Grid:
 
         return False
 
+# Creates the columns and rows
+# Note to Harry, change if you want to get a bigger Sudoku
 
 class Cube:
     rows = 9
@@ -178,7 +180,7 @@ class Cube:
             pygame.draw.rect(win, (255,0,0), (x,y, gap ,gap), 3)
 
     def draw_change(self, win, g=True):
-        fnt = pygame.font.SysFont("comicsans", 40)
+        fnt = pygame.font.SysFont("verdena", 40)
 
         gap = self.width / 9
         x = self.col * gap
@@ -232,7 +234,7 @@ def valid(bo, num, pos):
 
 def redraw_window(win, board, time, strikes):
     win.fill((255,255,255))
-    fnt = pygame.font.SysFont("comicsans", 40)
+    fnt = pygame.font.SysFont("verdena", 40)
     text = fnt.render("Time: " + format_time(time), 1, (0,0,0))
     win.blit(text, (540 - 160, 560))
     text = fnt.render("X " * strikes, 1, (255, 0, 0))
