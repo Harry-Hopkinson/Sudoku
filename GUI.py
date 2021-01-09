@@ -161,7 +161,7 @@ class Cube:
         self.selected = False
 
     def draw(self, win):
-        fnt = pygame.font.SysFont("comicsans", 40)
+        fnt = pygame.font.SysFont("verdana", 40)
 
         gap = self.width / 9
         x = self.col * gap
