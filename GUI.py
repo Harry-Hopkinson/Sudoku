@@ -8,6 +8,8 @@ pygame.font.init()
 
 # Generate some random numbers
 
+# Change the grid to the numbers of your sudoku - I have laid it out so 0 is an empty slot. Just add whatever number you want for the Sudoku or the solver.
+
 class Grid:
     board = [
         [7, 8, 0,   5, 0, 4,   0, 0, 0],
